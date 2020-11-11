@@ -6,10 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
-import ShareIcon from '@material-ui/icons/Share';
+// import Avatar from '@material-ui/core/Avatar';
+// import ShareIcon from '@material-ui/icons/Share';
 import IconButton from '@material-ui/core/IconButton';
 import CardMedia from '@material-ui/core/CardMedia';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
     bullet: {
@@ -25,36 +27,41 @@ const useStyles = makeStyles({
     },
 });
 
-export default function CoffeeCard(props) {
+export default function ProjectCard(props) {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
-    const { avatarUrl, title, subtitle, description, imageUrl } = props;
+    const { title, technology, description, liveLink, gitHubURL, imageUrl } = props;
 
     return (
-        <Card>
+        <Card style={{ height: '500px' }}>
         <CardHeader
-            avatar={
-                <Avatar src={avatarUrl} />
+            style={{ height: '120px' }}
+            // avatar={
+            //         <Avatar src={liveLink} />
 
-            }
+            // }
             action={
-                <IconButton aria-label="settings">
-                    <ShareIcon />
-                </IconButton>
+                <Link href={gitHubURL}>
+                    <IconButton aria-label="settings">
+                        <GitHubIcon />
+                    </IconButton>
+                </Link>
             }
             title={title}
-            subheader={subtitle}
+            subheader={technology}
         />
-            <CardMedia style={{height: '150px'}} image={imageUrl}/>
+            <Link href={liveLink}>
+                <CardMedia style={{ height: '150px' }} image={imageUrl}/>
+            </Link>
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
+                    Project Overview:
                 </Typography>
                 <Typography variant="body2" component="p">
                    {description}
-          <br />
-                    {'"a benevolent smile"'}
+          {/* <br />
+                    {'"a benevolent smile"'} */}
                 </Typography>
             </CardContent>
             <CardActions>
