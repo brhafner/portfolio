@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 
 export default function ProjectCard(props) {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
+    // const bull = <span className={classes.bullet}>•</span>;
 
     const { title, technology, description, liveLink, gitHubURL, imageUrl } = props;
 

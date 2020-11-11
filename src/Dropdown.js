@@ -10,7 +10,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import Link from '@material-ui/core/Link';
-import * as Resume from './assets/Resume - Ben Hafner.pdf'
+import { Typography } from '@material-ui/core';
 
 const StyledMenu = withStyles({
     paper: {
@@ -60,12 +60,14 @@ export default function CustomizedMenus() {
                 aria-controls="customized-menu"
                 aria-haspopup="true"
                 // variant="contained"
-                color="secondary"
+                color="white"
                 onClick={handleClick}
                 hover="pointer"
             >
-                Contact Me
-      </Button>
+                <Typography>
+                    Contact Me
+                </Typography>
+            </Button>
             <StyledMenu
                 id="customized-menu"
                 anchorEl={anchorEl}
@@ -77,7 +79,7 @@ export default function CustomizedMenus() {
                     href="https://greet-up-seeds.s3-us-west-1.amazonaws.com/Resume+-+Ben+Hafner.pdf"
                     target="_blank"
                     rel="noopener"
-                    // download
+                    color="inherit"
                 >
                     <StyledMenuItem >
                         <ListItemIcon>
