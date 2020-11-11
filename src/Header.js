@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import AcUnitRoundedIcon from '@material-ui/icons/AcUnitRounded';
+import PersonIcon from '@material-ui/icons/Person';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(() => ({
@@ -16,9 +16,9 @@ const Header = () => {
        <AppBar position="static">
            <Toolbar>
                <Typography className={classes.typographyStyles}>
-                   This is our Header
+                   Ben Hafner's Portfolio
                 </Typography>
-               <AcUnitRoundedIcon />
+               <PersonIcon />
            </Toolbar>
        </AppBar>
    );
