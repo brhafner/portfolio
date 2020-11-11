@@ -5,12 +5,12 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import Link from '@material-ui/core/Link';
+import * as Resume from './assets/Resume - Ben Hafner.pdf'
 
 const StyledMenu = withStyles({
     paper: {
@@ -40,7 +40,7 @@ const StyledMenuItem = withStyles((theme) => ({
                 color: theme.palette.common.white,
             },
         },
-    },
+    }
 }))(MenuItem);
 
 export default function CustomizedMenus() {
@@ -59,9 +59,10 @@ export default function CustomizedMenus() {
             <Button
                 aria-controls="customized-menu"
                 aria-haspopup="true"
-                variant="contained"
+                // variant="contained"
                 color="secondary"
                 onClick={handleClick}
+                hover="pointer"
             >
                 Contact Me
       </Button>
@@ -72,25 +73,44 @@ export default function CustomizedMenus() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <FingerprintIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Resume" />
-                </StyledMenuItem>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <LinkedInIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="LinkedIn" />
-                </StyledMenuItem>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <GitHubIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="GitHub" />
-                </StyledMenuItem>
-                <StyledMenuItem>
+                <Link
+                    href="https://greet-up-seeds.s3-us-west-1.amazonaws.com/Resume+-+Ben+Hafner.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    // download
+                >
+                    <StyledMenuItem >
+                        <ListItemIcon>
+                            <FingerprintIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Resume" />
+                    </StyledMenuItem>
+                </Link>
+                <Link 
+                    href="https://www.linkedin.com/in/brhafner/" 
+                    target="_blank" 
+                    rel="noopener" 
+                    color="inherit">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <LinkedInIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="LinkedIn" />
+                    </StyledMenuItem>
+                </Link>
+                <Link 
+                    href="https://github.com/brhafner/" 
+                    target="_blank"
+                    rel="noopener"                     
+                    color="inherit" >
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <GitHubIcon fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="GitHub" />
+                    </StyledMenuItem>
+                </Link>
+                <StyledMenuItem key="Email" component="a" href="mailto:brhafner@gmail.com">
                     <ListItemIcon>
                         <SendIcon fontSize="small" />
                     </ListItemIcon>
