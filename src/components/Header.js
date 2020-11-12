@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import PersonIcon from '@material-ui/icons/Person';
+// import PersonIcon from '@material-ui/icons/Person';
 import { makeStyles } from '@material-ui/styles';
 import Dropdown from './Dropdown';
 

@@ -7,7 +7,7 @@ const Content = () => {
     
     const getProjectCard = ( projectCardObj) => {
         return (
-            <Grid item xs={12} sm={4}>
+            <Grid key={projectCardObj.title} item xs={12} sm={4}>
                 <ProjectCard {...projectCardObj} />
             </Grid>
         )
