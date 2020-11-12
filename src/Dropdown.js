@@ -89,6 +89,7 @@ export default function CustomizedMenus() {
                     target="_blank"
                     rel="noopener"
                     color="inherit"
+                    onClick={handleClose}
                 >
                     <StyledMenuItem >
                         <ListItemIcon>
@@ -101,7 +102,9 @@ export default function CustomizedMenus() {
                     href="https://www.linkedin.com/in/brhafner/" 
                     target="_blank" 
                     rel="noopener" 
-                    color="inherit">
+                    color="inherit"
+                    onClick={handleClose}
+                >
                     <StyledMenuItem>
                         <ListItemIcon>
                             <LinkedInIcon fontSize="small" />
@@ -113,7 +116,9 @@ export default function CustomizedMenus() {
                     href="https://github.com/brhafner/" 
                     target="_blank"
                     rel="noopener"                     
-                    color="inherit" >
+                    color="inherit" 
+                    onClick={handleClose}
+                    >
                     <StyledMenuItem>
                         <ListItemIcon>
                             <GitHubIcon fontSize="small" />
@@ -121,7 +126,12 @@ export default function CustomizedMenus() {
                         <ListItemText primary="GitHub" />
                     </StyledMenuItem>
                 </Link>
-                <StyledMenuItem key="Email" component="a" href="mailto:brhafner@gmail.com">
+                <StyledMenuItem 
+                    key="Email" 
+                    component="a" 
+                    href="mailto:brhafner@gmail.com"
+                    onClick={handleClose}
+                    >
                     <ListItemIcon>
                         <SendIcon fontSize="small" />
                     </ListItemIcon>
