@@ -15,11 +15,11 @@ const Content = () => {
 
     return (
         <Fragment >
-            <Typography >Software Engineering Projects</Typography>
+            <Typography style={{ fontSize: "28px", margin: "100px 0 30px 0" , fontWeight: '600'}}>Software Engineering Projects</Typography>
             <Grid container spacing={4}>
                 {sweProjects.map(projectCardObj => getProjectCard(projectCardObj))}
             </Grid>
-            <Typography >Product Management Projects</Typography>
+            <Typography style={{ fontSize: "24px", margin: "30px 0", fontWeight: '600' }}>Product Management Projects</Typography>
             <Grid container spacing={4}>
                 {productManagementProjects.map(projectCardObj => getProjectCard(projectCardObj))}
             </Grid>

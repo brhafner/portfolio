@@ -21,6 +21,8 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: 14,
+        fontWeight: 700,
+        color: "#212121"
     },
     pos: {
         marginBottom: 12,
@@ -47,7 +49,7 @@ export default function ProjectCard(props) {
         : null;
 
     return (
-        <Card style={{ height: '470px' }}>
+        <Card style={{ height: '450px' }}>
         <CardHeader
             style={{ height: '100px' }}
             // avatar={
@@ -71,7 +73,7 @@ export default function ProjectCard(props) {
                 <CardMedia style={{ height: '150px' }} image={imageUrl}/>
             </Link>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                <Typography className={classes.title} gutterBottom>
                     Project Overview:
                 </Typography>
                 <Typography variant="body2" component="p">

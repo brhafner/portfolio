@@ -45,7 +45,7 @@ const StyledMenuItem = withStyles((theme) => ({
 
 const useStyles = makeStyles({
     typographyMain: {
-        fontSize: 16,
+        fontSize: 22,
         color: "white",
     }
 });

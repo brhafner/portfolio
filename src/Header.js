@@ -6,12 +6,13 @@ import Dropdown from './Dropdown';
 
 const useStyles = makeStyles(() => ({
     appBarBackground: {
-        background: 'linear-gradient(45deg, #2196F3 60%, #21CBF3 100%)',
+        background: 'linear-gradient(45deg, #0276aa 60%, #35baf6 100%)',
         marginBottom: '40px'
     },
     typographyStyles: {
         flex: 1,
-        fontSize: '20px'
+        fontSize: '28px',
+        fontWeight: '600'
     }
 }))
 
@@ -19,7 +20,7 @@ const Header = () => {
     const classes = useStyles();
 
    return (
-       <AppBar position="static" className={classes.appBarBackground}>
+       <AppBar position="fixed" className={classes.appBarBackground}>
            <Toolbar>
                <Typography className={classes.typographyStyles}>
                    Ben Hafner

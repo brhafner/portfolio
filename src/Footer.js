@@ -20,7 +20,7 @@ const Footer = () => {
         <AppBar position="static" className={classes.appBarBackground}>
             <Toolbar>
                 <Typography className={classes.typographyStyles}>
-                    © 2020 Ben Hafner LLC
+                    © 2020 Ben Hafner
                 </Typography>
             </Toolbar>
         </AppBar>
