@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -43,6 +43,13 @@ const StyledMenuItem = withStyles((theme) => ({
     }
 }))(MenuItem);
 
+const useStyles = makeStyles({
+    typographyMain: {
+        fontSize: 16,
+        color: "white",
+    }
+});
+
 export default function CustomizedMenus() {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -54,17 +61,19 @@ export default function CustomizedMenus() {
         setAnchorEl(null);
     };
 
+    const classes = useStyles();
+
     return (
         <div>
             <Button
                 aria-controls="customized-menu"
                 aria-haspopup="true"
                 // variant="contained"
-                color="white"
+                // color="white"
                 onClick={handleClick}
                 hover="pointer"
             >
-                <Typography>
+                <Typography className={classes.typographyMain}>
                     Contact Me
                 </Typography>
             </Button>

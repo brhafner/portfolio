@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     },
     pos: {
         marginBottom: 12,
-    },
+    }
 });
 
 export default function ProjectCard(props) {
@@ -33,25 +33,41 @@ export default function ProjectCard(props) {
 
     const { title, technology, description, liveLink, gitHubURL, imageUrl } = props;
 
+    let gitHubIconShow = gitHubURL 
+        ? 
+        <Link
+            href={gitHubURL}
+            target="_blank"
+            rel="noopener"
+        >
+            <IconButton aria-label="settings">
+                <GitHubIcon />
+            </IconButton>
+        </Link>
+        : null;
+
     return (
-        <Card style={{ height: '500px' }}>
+        <Card style={{ height: '470px' }}>
         <CardHeader
-            style={{ height: '120px' }}
+            style={{ height: '100px' }}
             // avatar={
             //         <Avatar src={liveLink} />
 
             // }
-            action={
-                <Link href={gitHubURL}>
-                    <IconButton aria-label="settings">
-                        <GitHubIcon />
-                    </IconButton>
-                </Link>
-            }
+            // action={
+            //     <Link href={gitHubURL}>
+            //         <IconButton aria-label="settings">
+            //             <GitHubIcon />
+            //         </IconButton>
+            //     </Link>
+            // }
             title={title}
             subheader={technology}
         />
-            <Link href={liveLink}>
+            <Link href={liveLink} 
+                target="_blank"
+                rel="noopener"
+            >
                 <CardMedia style={{ height: '150px' }} image={imageUrl}/>
             </Link>
             <CardContent>
@@ -60,12 +76,17 @@ export default function ProjectCard(props) {
                 </Typography>
                 <Typography variant="body2" component="p">
                    {description}
-          {/* <br />
-                    {'"a benevolent smile"'} */}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
+            <CardActions >
+                <Link 
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <Button size="small">Live Site</Button>
+                </Link>
+                {gitHubIconShow}
             </CardActions>
         </Card>
     );
