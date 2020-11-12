@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, ThemeProvider, createMuiTheme } from '@material-ui/core'
-import Header from './Header'
-import Content from "./Content";
-import Footer from "./Footer";
+import Header from './components/Header'
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 import { grey, red } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({

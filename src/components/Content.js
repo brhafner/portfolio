@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import ProjectCard from './ProjectCard';
 import { Grid, Typography } from '@material-ui/core';
-import { sweProjects, productManagementProjects } from './constants';
+import { sweProjects, productManagementProjects } from '../constants';
 
 const Content = () => {
     
