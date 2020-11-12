@@ -1,22 +1,50 @@
 import React from "react";
-import { Grid } from '@material-ui/core'
+import { Grid, ThemeProvider, createMuiTheme } from '@material-ui/core'
 import Header from './Header'
 import Content from "./Content";
+import Footer from "./Footer";
+import { grey, red } from "@material-ui/core/colors";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: grey[600]
+    },
+    secondary: {
+      main: red[500]
+    }, 
+    background: {
+      paper: grey[200],
+      default: grey[900]
+    }
+  }
+});
+
+const Home = () => {
+  return (
+    <Grid container direction="column">
+      <Grid item >
+        <Header />
+      </Grid>
+      <Grid item container>
+        <Grid item xs={1} sm={1} md={1} />
+        <Grid item xs={10} sm={10} md={10}>
+          <Content />
+        </Grid>
+        <Grid item xs={1} sm={1} md={1} />
+      </Grid>
+      <Grid item >
+        <Footer />
+      </Grid>
+    </Grid>
+  );
+};
 
 const App = () => {
   return (
-    <Grid container direction="column">
-        <Grid item >
-            <Header />
-        </Grid>
-        <Grid item container>
-            <Grid item xs={false} sm={2} />
-              <Grid item xs={12} sm={8}>
-                  <Content />
-                </Grid>
-            <Grid item xs={false} sm={2} />
-        </Grid>
-    </Grid>
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
   );
 };
 
