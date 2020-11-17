@@ -85,7 +85,7 @@ export default function CustomizedMenus() {
                 onClose={handleClose}
             >
                 <Link
-                    href="https://greet-up-seeds.s3-us-west-1.amazonaws.com/Resume+-+Ben+Hafner.pdf"
+                    href="https://greet-up-seeds.s3-us-west-1.amazonaws.com/Ben_Hafner_Resume.pdf"
                     target="_blank"
                     rel="noopener"
                     color="inherit"

@@ -17,7 +17,7 @@ export const sweProjects = [
         description:
             "NiteTrader is a stock trading simulator that allows user to buy in, set goals and track their investment progress over time. Start learning how to invest!",
         liveLink: 
-            "https://nitetrader.herokuapp.com/#//",
+            "http://thenitetrader.com/#/",
         gitHubURL:
             "https://github.com/relynch91/NiteTrader",
         imageUrl:

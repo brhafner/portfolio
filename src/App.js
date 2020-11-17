@@ -27,11 +27,11 @@ const Home = () => {
         <Header />
       </Grid>
       <Grid item container>
-        <Grid item xs={1} sm={1} md={1} />
-        <Grid item xs={10} sm={10} md={10}>
+        <Grid item xs={1} sm={1}  />
+        <Grid item xs={10} sm={10} >
           <Content />
         </Grid>
-        <Grid item xs={1} sm={1} md={1} />
+        <Grid item xs={1} sm={1}  />
       </Grid>
       <Grid item >
         <Footer />
